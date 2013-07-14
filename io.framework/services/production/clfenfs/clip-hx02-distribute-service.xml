@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] CLIP Distribution Hx02
+	@date 		20120522
+	@documentation:
+		1)  Scans NFS source files for Hx02 files after finishing transfer 
+		2)  Copies Zip files to Backup
+		3)  Unzips file on source folder (deletes the zip files)
+		4)  Moves to OA destination folder (DeliveryFinishing)
+		5)  Notifies all
+-->
+<service name="clip-Hx02-Distribution" 
+	description="Copies Hx02 files to Finishing delivery for OA/Websupport" domain="FEProduction">
+	<jobList type="sequential">
+ 		<job name="CLIP: Backup Hx02" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\zip\Factura</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\CLIP\preprocessor</to>
+			</destinations>
+			<filterOptions>
+				<filter>^CLIP_(\d){8}.(\w)+.zip$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>	
+		<job name="clip: Unzip Hx02" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.UnzipJob">
+			<sources>
+				<from password="cLip">F:\zip\Factura</from>
+			</sources>
+			<destinations>
+				<to>F:\zip\Factura</to>
+			</destinations>
+			<filterOptions>
+				<filter>^CLIP_(\d){8}.(\w)+.zip$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>
+ 		<job name="clip: Copy Hx02 to Delivery" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\zip\Factura</from>
+			</sources>
+			<destinations>
+				<to>J:\DeliveryFinishing\CLIP\preprocessor</to>
+			</destinations>
+			<filterOptions>
+				<filter>^CLIP_(\d){8}.(complete|NIF|DATA)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+	</jobList>
+	<scheduling>
+		<startAt date="immediate"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="2"/> 			
+	</scheduling>	
+</service>

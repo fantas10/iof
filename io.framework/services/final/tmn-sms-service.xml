@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] TMN smsFE and smsPayments files
+	@date 		20120612
+	@documentation:
+		1)  Scans NFS source files for sms files (*.SMS) and payments (PAYMENTS*.SMS)  
+		2)  Zip files to Backup
+		3)  Deletes the 0Kb files
+		4)  Moves to OA destination folder (DeliveryFinishing)
+		5)  Notifies all
+-->
+<service name="TMN.smsfe-and-payments.delivery" 
+	description="Copies and Backups SMS and PAYMENT_SMS files to Finishing delivery for OA/Websupport" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="tmn-sms: backup sms FE files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\sms\*{File[0,5]}.*{File[10,16]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.SMS$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource>		
+		</job>
+		<job name="tmn-sms: backup sms PPS files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\sms\*{File[0,9]}.*{File[14,20]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PPS.(TMN02|TMN01).([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.SMS$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource>		
+		</job>		
+		<job name="tmn-sms: backup sms PAYMENT files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\sms\*{File[0,14]}.*{File[19,25]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PAYMENTS.TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.SMS$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource>		
+		</job>
+		<job scope="internal" nature="archive" name="tmn-sms: delete 0kb files" type="pt.ptsi.stfe.archive.DeleteJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<filterOptions>
+				<filter>^(PAYMENTS.TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.SMS|(PPS.(TMN02|TMN01)|(TMN02)).([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.SMS)$</filter>
+				<size direction="atMost">0</size> <!-- in Kb -->
+			</filterOptions>
+		</job>		
+		<job name="tmn-sms: copy sms files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>J:\DeliveryFinishing\TMN\sms_notification</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(PPS.(TMN02|TMN01)|(TMN02)).([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.SMS$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>
+		<job name="tmn-sms: copy sms payment files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>J:\DeliveryFinishing\TMN\sms_payments</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PAYMENTS.TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.SMS$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>	
+	</jobList>
+	<scheduling>
+		<startAt date="2012-06-14 18:56:00"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="2"/> 			
+	</scheduling>
+</service>

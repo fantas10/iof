@@ -1,0 +1,75 @@
+2013-06-28 11:24:19,832 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 16:48:35,402 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 16:53:31,019 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 16:57:06,608 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 17:03:49,854 [DefaultQuartzScheduler_Worker-2] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-get: Copy from leadtracking: null
+2013-06-28 17:03:49,856 [DefaultQuartzScheduler_Worker-2] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:10 094 . with status=ERROR
+2013-06-28 17:03:50,851 [DefaultQuartzScheduler_Worker-2] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 17:06:21,274 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 17:06:23,832 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-get: Copy from leadtracking: null
+2013-06-28 17:06:23,833 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 128 . with status=ERROR
+2013-06-28 17:06:24,557 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 17:07:26,173 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 17:07:28,340 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-get: Copy from leadtracking: null
+2013-06-28 17:07:28,340 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 082 . with status=ERROR
+2013-06-28 17:07:28,716 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 17:08:05,646 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 17:10:46,586 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 Workflow took : 00:02:38 835 . with status=OK
+2013-06-28 17:10:46,816 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 17:14:21,118 [DefaultQuartzScheduler_Worker-2] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 Workflow took : 00:02:16 911 . with status=OK
+2013-06-28 17:14:21,127 [DefaultQuartzScheduler_Worker-2] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 17:43:20,786 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 17:43:23,154 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/sftp-put: SFTP to Destination: Connection closed without indication.
+2013-06-28 17:43:23,155 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 344 . with status=ERROR
+2013-06-28 17:43:23,361 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 17:44:20,093 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 17:44:22,522 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/sftp-put: SFTP to Destination: /Users/eddie/Development/devWorks/io.framework/lead (Is a directory)
+2013-06-28 17:44:22,523 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 374 . with status=ERROR
+2013-06-28 17:44:22,753 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 17:45:22,488 [DefaultQuartzScheduler_Worker-2] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: SFTP to Destination: /Users/eddie/Development/devWorks/io.framework/lead (Is a directory)
+2013-06-28 17:45:22,490 [DefaultQuartzScheduler_Worker-2] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 230 . with status=ERROR
+2013-06-28 17:45:22,496 [DefaultQuartzScheduler_Worker-2] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 17:46:46,606 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:09:12,552 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:12:25,503 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:13:02,818 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:14:28,789 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:14:30,984 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: SFTP to Destination: /Users/eddie/Development/devWorks/io.framework/lead (Is a directory)
+2013-06-28 18:14:30,984 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 163 . with status=ERROR
+2013-06-28 18:14:31,250 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 18:14:48,110 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:17:37,476 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:19:18,673 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: SFTP to Destination: null
+2013-06-28 18:19:30,736 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:19:32,941 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: SFTP to Destination: null
+2013-06-28 18:19:32,942 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 085 . with status=ERROR
+2013-06-28 18:20:03,274 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 18:20:12,378 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:20:55,800 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:22:47,614 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:24:27,090 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:25:03,736 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:25:07,035 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: SFTP to Destination: null
+2013-06-28 18:25:07,036 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:01 244 . with status=ERROR
+2013-06-28 18:25:37,350 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 18:26:25,996 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:26:29,102 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: SFTP to Destination: null
+2013-06-28 18:26:29,103 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:01 097 . with status=ERROR
+2013-06-28 18:26:59,427 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 18:30:39,218 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:30:42,358 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: SFTP to Destination: null
+2013-06-28 18:30:42,358 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 965 . with status=ERROR
+2013-06-28 18:31:12,672 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 18:32:29,348 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:36:25,774 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:36:28,794 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: SFTP to Destination: null
+2013-06-28 18:36:28,794 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 893 . with status=ERROR
+2013-06-28 18:36:58,867 [DefaultQuartzScheduler_Worker-2] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: null
+2013-06-28 18:36:58,868 [DefaultQuartzScheduler_Worker-2] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 900 . with status=ERROR
+2013-06-28 18:36:59,078 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 18:36:59,078 [DefaultQuartzScheduler_Worker-2] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-28 18:39:54,706 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:41:11,340 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-28 18:41:13,725 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: null
+2013-06-28 18:41:13,726 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 684 . with status=ERROR
+2013-06-28 18:41:43,951 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!

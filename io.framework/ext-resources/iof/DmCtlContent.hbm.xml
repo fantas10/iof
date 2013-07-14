@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 12, 2012 5:06:02 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pt.ptsi.stfe.connectors.ctl.db.DmCtlContent" table="iof_ctlContentsQA">
+        <composite-id mapped="false" name="id" class="pt.ptsi.stfe.connectors.ctl.db.DmCtlContentId">
+		    <key-property name="companyId" type="int" column="companyId" />
+		    <key-property name="portalId" type="int" column="portalId" />
+		    <key-property name="accountId" type="java.lang.String" column="accountId" />
+		    <key-property name="invoiceId" type="java.lang.String" column="invoiceId" />
+		    <key-property name="processingSequence" type="int" column="processingSequence" />
+        </composite-id>
+        <property name="fileId" type="int">
+            <column name="fileId" />
+        </property>
+        <property name="statementDate" type="java.util.Date">
+            <column name="statementDate" />
+        </property>
+        <property name="marketingCode" type="java.lang.String">
+            <column name="marketingCode" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="email" />
+        </property>
+        <property name="attachment1" type="java.lang.String">
+            <column name="attachment1" />
+        </property>
+        <property name="attachment2" type="java.lang.String">
+            <column name="attachment2" />
+        </property>
+        <property name="attachment3" type="java.lang.String">
+            <column name="attachment3" />
+        </property>
+        <property name="eNewsletter" type="java.lang.String" access="field">
+            <column name="eNewsletter" />
+        </property>
+        <property name="ctlLine" type="java.lang.String">
+            <column name="ctlFullLine" />
+        </property>
+        <property name="viaCTT" type="true_false">
+            <column name="viaCTT" />
+        </property>       
+        <property name="ubl" type="true_false">
+            <column name="ubl" />
+        </property>    
+        <property name="mbdox" type="true_false">
+            <column name="mbdox" />
+        </property>    
+        <property name="signedUBL" type="true_false">
+            <column name="signedUBL" />
+        </property>    
+        <property name="signedUBLandPDF" type="true_false">
+            <column name="signedUBLandPDF" />
+        </property>                                     
+    </class>
+</hibernate-mapping>

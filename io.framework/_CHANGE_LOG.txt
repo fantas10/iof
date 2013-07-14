@@ -1,0 +1,17 @@
+#############################
+- fixed SWT 64 bit for Mac
+- upgraded TrueZip to 7.7.2
+- upgraded JSch to 0.1.50
+- jsch, commons-vfs, commons-io-2.3
+	-Get e Put Job
+	
+	
+	- updated on TPKNT83
+##############################
+- commons-net (2.0 -> 3.3)	done
+- ftp4j (sauron)			done
+
+- io.framework.jar -- added validation/alarm
+	- updated on TPKNT83
+
+##############################

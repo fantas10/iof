@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] DSIT Online Distribution
+	@date 		20120523
+	@documentation:
+		1)  Scans NFS source files for dsit (*.dsit and *.complete) - these come unzipped!
+		2)  Zip files to Backup
+		4)  Moves to OA destination folder (DeliveryFinishing)
+		5)  Notifies all
+-->
+<service name="DSIT-Distribution" 
+	description="Copies dSit files to Finishing delivery for OA/Websupport" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="dsit: Zip DSIT to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\ftpServer\dSIT\</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\SIT\preprocessor\*{Date.yyyy}_*{Date.MM}\dsit_*{Date.MM}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(Sit|SIT)_(\d|_)+_(\d){6}.(dsit|complete)$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>	
+ 		<job name="dsit: Copy DSit to Delivery" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\ftpServer\dSIT\</from>
+			</sources>
+			<destinations>
+				<to>J:\DeliveryFinishing\SIT\preprocessor</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(Sit|SIT)_(\d|_)+_(\d){6}.(dsit|complete)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+	</jobList>
+	<scheduling>
+		<startAt date="immediate"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="2"/> 			
+	</scheduling>	
+</service>

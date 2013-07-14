@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service name="ping" description="ping service" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="ping" scope="internal" nature="archive" type="pt.ptsi.stfe.io.engine.jobs.PingJob">
+		</job>
+	</jobList>
+</service>

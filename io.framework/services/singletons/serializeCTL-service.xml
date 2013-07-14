@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] TMN Serialize CTL
+	@date 		20120611
+	@documentation:
+-->
+<service name="serializeCTLs" description="Serializes CTLs for TMN (PPS e FE)" domain="FEProduction">
+	<jobList type="sequential">	
+		<job name="tmnafp: Serialize CTL" scope="extension" nature="extension" type="pt.ptsi.stfe.connectors.ctl.SerializeCTL">
+			<datasource type="hibernate" name="SerializeCtlDS">
+				<properties>
+					<property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+					<property name="hibernate.connection.url">jdbc:sqlserver://10.50.57.73:1433;databaseName=STControlDB</property>
+					<property name="hibernate.connection.username">ST</property>
+					<property name="hibernate.connection.password">STControl</property>
+					<property name="hibernate.default_schema">ST</property>
+					<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+					<!-- <property name="hibernate.show_sql">true</property> -->	
+					<property name="hibernate.connection.pool_size">1</property>
+					<property name="hibernate.connection.autocommit">true</property>
+					<property name="hibernate.current_session_context_class">thread</property>
+				</properties>
+				<mappings>
+					<mapping>/Users/eddie/Development/jWorkspace/io.framework/ext-resources/iof/DmCtlContent.hbm.xml</mapping>
+					<mapping>/Users/eddie/Development/jWorkspace/io.framework/ext-resources/iof/DmCtlFile.hbm.xml</mapping>
+				</mappings>
+			</datasource>
+			<sources>
+				<from>/Users/eddie/Development/devWorks/io.framework/CTL</from>
+			</sources>	
+			<filterOptions>
+				<filter>((\w|.)+).CTL$</filter>   
+			</filterOptions>						
+		</job>							
+	</jobList>
+</service>

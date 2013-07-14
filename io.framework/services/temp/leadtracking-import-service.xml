@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Documentação:
+		-   Leadtracking import Service
+		Vai buscar os ficheiros ao ETF
+ -->
+
+<service name="leadtracking import service" scope="internal" type="pt.ptsi.stfe.transfer.ImportTransfer">
+
+	<!-- types: import, export, list -->
+	<transfer type="import">
+		<protocol>FTPS</protocol>
+		<server>10.162.205.100</server> <!-- Entreposto de Ficheiros @ PRD -->
+		<account>
+			<username>feleadtr</username>
+			<password>fe2010tr</password>
+		</account>
+		<remotefiles> <!-- 1..many targets -->
+			<target sourceDirectory="/feleadtr/input/wireless" destinationDirectory="Z:/PRD_TMN_Input/LEADTRACKING/"/>
+		</remotefiles>
+	</transfer>
+	<scheduling>
+		<job type="cron"></job>
+	</scheduling>
+	
+</service>

@@ -1,0 +1,159 @@
+2013-06-24 23:44:52,041 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-24 23:44:52,960 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+java.net.UnknownHostException: eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-06-24 23:44:55,361 [DefaultQuartzScheduler_Worker-1] WARN  pt.ptsi.stfe.io.engine.IOEngine - ended execution, took 00:00:00 878
+2013-06-24 23:44:55,362 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:sftp-put-files:-1403268091 Workflow took : 00:00:00 881 . with status=NOACTION
+2013-06-24 23:45:22,945 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-24 23:45:23,424 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+java.net.UnknownHostException: eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-06-24 23:46:22,394 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-24 23:46:22,849 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+java.net.UnknownHostException: eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-06-24 23:47:57,651 [IOEngine] INFO  pt.ptsi.stfe.io.engine.IOEngine - ===> STOPPED Engine & Monitor With Success!!...
+2013-06-24 23:47:57,653 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT shutting down daemon
+2013-06-24 23:48:45,283 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-24 23:49:18,696 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+java.net.UnknownHostException: eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-06-24 23:51:09,492 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-24 23:51:09,969 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+java.net.UnknownHostException: eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-06-24 23:51:54,475 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-24 23:51:54,921 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+java.net.UnknownHostException: eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-06-24 23:51:57,002 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/sftp-get: Copy from leadtracking: 4: Received message is too long: 1416128878
+2013-06-24 23:51:57,002 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 691 . with status=ERROR
+2013-06-24 23:54:11,218 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-24 23:54:18,275 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+java.net.UnknownHostException: eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-06-24 23:55:53,815 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/sftp-get: Copy from leadtracking: java.io.IOException: Pipe closed
+2013-06-24 23:55:59,897 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:01:40 201 . with status=ERROR
+2013-06-24 23:56:09,260 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-24 23:56:09,743 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+java.net.UnknownHostException: eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-06-24 23:56:11,538 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/sftp-get: Copy from leadtracking: java.io.IOException: Pipe closed
+2013-06-24 23:56:11,539 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 357 . with status=ERROR
+2013-06-24 23:56:36,010 [IOEngine] INFO  pt.ptsi.stfe.io.engine.IOEngine - ===> STOPPED Engine & Monitor With Success!!...
+2013-06-24 23:56:36,015 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT shutting down daemon
+2013-06-24 23:56:36,589 [IOEngine] INFO  pt.ptsi.stfe.io.engine.IOEngine - ===> STOPPED Engine & Monitor With Success!!...
+2013-06-24 23:56:36,597 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT shutting down daemon
+2013-06-24 23:56:41,238 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-24 23:56:41,715 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+java.net.UnknownHostException: eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-06-24 23:56:44,483 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/sftp-get: Copy from leadtracking: 4: Received message is too long: 1416128878
+2013-06-24 23:56:44,483 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:01 348 . with status=ERROR
+2013-06-24 23:56:59,066 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-24 23:56:59,795 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+java.net.UnknownHostException: eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-06-24 23:57:45,482 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-24 23:57:45,947 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+java.net.UnknownHostException: eddie-macbook.lan: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: eddie-macbook.lan: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more

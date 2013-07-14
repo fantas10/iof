@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] TMN PPS, APF and UBL files
+	@date 		20120523
+	@documentation:
+		1)  Scans NFS source files for TMN AFP files (PPS and UBL included) and unzips them
+		2)  Zip files to Backup
+		3)  Deletes the 0Kb files
+		4)  Serializes CTLs to database
+		5)  Moves to OA destination folder (DeliveryFinishing)
+		6)  Creates Resource Jar for each RES included - gets latest jar view
+		7)  Notifies all
+-->
+<service name="TMN.afp-and-ubl.delivery" 
+	description="Copies and Backups AFP and UBL files to Finishing delivery for OA/Websupport" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="tmn-afp: Unzip Files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.UnzipJob">
+			<sources>
+				<from password="cLip">F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>F:\zip\TMN</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(PPS.(TMN02|TMN01)|(TMN02)).([A-Z](\d){2}|[A-Z]{2}\d).(COMPLETE|(\d){8}.EMAIL.(DATA|RES|TOT|UBL)).zip$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>	
+		<job name="tmn-afp: Zip TMN files to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\*{Date.yyyy}*{Date.MM}\*{File[0,5]}.*{File[10,16]}.*{Date.dd}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(COMPLETE|(\d){8}.EMAIL.(DATA|RES|TOT))$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>
+		<job name="tmn-ubl: Zip TMN files to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\*{Date.yyyy}*{Date.MM}\UBL_*{File[0,5]}.*{File[10,16]}.*{Date.dd}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.UBL$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>		
+		<job name="tmn-pps-afp: Zip TMN PPS files to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\*{Date.yyyy}*{Date.MM}\*{File[0,9]}.*{File[14,20]}.*{Date.dd}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PPS.(TMN02|TMN01).([A-Z](\d){2}|[A-Z]{2}\d).(COMPLETE|(\d){8}.EMAIL.(DATA|RES|TOT))$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>	
+		<job scope="internal" nature="archive" name="tmn-sms: delete 0kb files" type="pt.ptsi.stfe.archive.DeleteJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<filterOptions>
+				<filter>^(PPS.(TMN02|TMN01)|(TMN02)).([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.(DATA|RES|UBL|CTL)$</filter>
+				<size direction="atMost">0</size> <!-- in Kb -->
+			</filterOptions>
+		</job>		
+		<job scope="internal" nature="archive" name="tmn-sms: delete .tot and .complete" type="pt.ptsi.stfe.archive.DeleteJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<filterOptions>
+				<filter>^(PPS.(TMN02|TMN01)|(TMN02)).([A-Z](\d){2}|[A-Z]{2}\d).(COMPLETE|(\d){8}.EMAIL.TOT)$</filter>
+			</filterOptions>
+		</job>		
+		<job name="tmn-afp: Serialize CTL" scope="extension" nature="extension" type="pt.ptsi.stfe.connectors.ctl.SerializeCTL">
+			<datasource type="hibernate" name="SerializeCtlDS">
+				<properties>
+					<property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+					<property name="hibernate.connection.url">jdbc:sqlserver://10.50.57.73:1433;databaseName=STControlDB</property>
+					<property name="hibernate.connection.username">ST</property>
+					<property name="hibernate.connection.password">STControl</property>
+					<property name="hibernate.default_schema">ST</property>
+					<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+					<property name="hibernate.connection.pool_size">1</property>
+					<property name="hibernate.connection.autocommit">true</property>
+					<property name="hibernate.current_session_context_class">thread</property>				
+				</properties>
+				<mappings>
+					<mapping>D:\STFE\IOF\extensions\resources\DmCtlContent.hbm.xml</mapping>
+					<mapping>D:\STFE\IOF\extensions\resources\DmCtlFile.hbm.xml</mapping>
+				</mappings>
+			</datasource>
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>	
+			<filterOptions>
+				<filter>^(PPS.(TMN02|TMN01)|(TMN02)).([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.CTL$</filter>   
+			</filterOptions>						
+		</job>			
+						 			
+ 		<job name="tmn-afp: Copy to Delivery" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>J:\DeliveryFinishing\TMN</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(PPS.(TMN02|TMN01)|(TMN02)).([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.(DATA|RES|UBL|CTL)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>
+		<job name="tmn-afp: Create StreamA2P Resources" scope="extension" nature="extension" type="pt.ptsi.stfe.connectors.resources.CreateStreamA2PResources">
+			<environment>
+				<context server="t3://10.50.57.160:8102" user="weblogic" password="weblogic" jndiFactory="weblogic.jndi.WLInitialContextFactory" jndiObject="edx.tmn.ejb.VersionManager" />
+				<edxHome>\\tpknt81\d$\prd-tmn-batch\TBM\estatement</edxHome>
+				<ddn>TMN_AFP</ddn>
+				<views>
+					<view name="invoicePDF" />							
+				</views>
+			</environment>		
+			<sources>
+				<from>J:\DeliveryFinishing\TMN</from>
+			</sources>		
+			<filterOptions>
+				<filter>^(PPS.(TMN02|TMN01)|(TMN02)).([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.RES$</filter>
+			</filterOptions>
+		</job>	
+		<!--  				
+ 		<job name="tmn-afp: Move Resources and Jars" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>J:\DeliveryFinishing\TMN</from>
+			</sources>
+			<destinations>
+				<to>E:\AFP Resources\PTEMPRESA_AFP\RES</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(SIT.(\d){3}.(\d){6}.(\w|.)+RES|StreamA2P_SIT.(\d){3}.(\d){6}.(\w|.)+jar)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+		-->
+	</jobList>
+	<!-- 
+	<scheduling>
+		<startAt date="2012-06-18 18:35:00"/>
+		<!- - interval in timeType: hours | minutes | seconds - ->
+		<interval in="hours" value="2"/> 			
+	</scheduling>
+	 -->	
+</service>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] CLIP Distribution SMS / SDM
+	@date 		20120523
+	@documentation:
+		1)  Scans NFS source for SMS/SDM files after finishing transfer 
+		2)  Copies Zip files to Backup
+		3)  Unzips file on source folder (deletes the zip files)
+		4)  Moves to OA destination folder (DeliveryFinishing)
+		5)  Notifies all
+-->
+<service name="clip-SMS-SDM-Distribution" 
+	description="Copies SMS/SDM files to Finishing delivery for OA/Websupport" domain="FEProduction">
+	<jobList type="sequential">
+ 		<job name="CLIP: Backup SMS/SDM" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>C:\Temp\project\eDocsIOF\sourceNFS</from>
+			</sources>
+			<destinations>
+				<to>C:\Temp\project\eDocsIOF\Backup\notify_sms_sdm\*{Date.yyyy}_*{Date.MM}\</to>
+			</destinations>
+			<filterOptions>
+				<filter>^notificacao_C(\d){6}.(sms|sdm).zip$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>
+		<job name="clip: Unzip sdm/sms" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.UnzipJob">
+			<sources>
+				<from password="cLip">C:\Temp\project\eDocsIOF\sourceNFS</from>
+			</sources>
+			<destinations>
+				<to>C:\Temp\project\eDocsIOF\sourceNFS</to>
+			</destinations>
+			<filterOptions>
+				<filter>^notificacao_C(\d){6}.(sms|sdm).zip$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>
+ 		<job name="clip: Copy SDM/SMS to Delivery" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>C:\Temp\project\eDocsIOF\sourceNFS</from>
+			</sources>
+			<destinations>
+				<to>C:\Temp\project\eDocsIOF\DeliveryFinishing</to>
+			</destinations>
+			<filterOptions>
+				<filter>^notificacao_C(\d){6}.(sms|sdm)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+	</jobList>
+	<scheduling>
+		<startAt date="immediate"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="1"/> 			
+	</scheduling>	
+</service>

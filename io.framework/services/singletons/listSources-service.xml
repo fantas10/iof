@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		STFE
+	@title 		List sources for specific match
+	@date 		20120523
+	@documentation:
+		- Scans billing sources for file presence
+		- notifies in positive case (at least one file found)
+-->
+<service name="List-source-billing-files" description="Scans billing sources for file presence" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="billing: List Eligible Files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ListJob">
+			<sources>
+				<from>F:\zip\Factura</from>
+				<from>F:\zip\PTPrime</from>
+				<from>F:\ftpServer\dSIT</from>
+			</sources>
+			<filterOptions>
+				<filter>^(Sit|SIT)_(\d|_)+_(\d){6}.(dsit|complete)$</filter>
+				<!-- atMost|atLeast -->
+				<size direction="atMost">0</size> <!-- in bytes -->
+				<!-- created|modified -->
+				<!-- in seconds from right now! -->
+				
+			</filterOptions>
+			<validate condition="and">
+				<file count="5+" />
+				<age type="modified" direction="olderThan" in="minutes">86400</age> <!-- 2 days -->
+			</validate>
+		</job>	
+	</jobList>
+	<scheduling>
+		<startAt date="immediate"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="1"/>  			
+	</scheduling>
+</service>

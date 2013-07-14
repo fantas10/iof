@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		STFE
+	@title 		List sources for specific match
+	@date 		20120523
+	@documentation:
+		- Scans billing sources for file presence
+		- notifies in positive case (at least one file found)
+-->
+<service name="List-source-billing-files" description="Scans billing sources for file presence" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="billing: List Eligible Files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ListJob">
+			<sources>
+				<from>F:\zip\Factura</from>
+				<from>F:\zip\PTPrime</from>
+				<from>F:\ftpServer\dSIT</from>
+			</sources>
+			<filterOptions>
+				<filter>^(Sit|SIT)_(\d|_)+_(\d){6}.(dsit|complete)$</filter>
+			</filterOptions>
+			<validate>
+				<fileset condition="or">
+					<count>5+</count>
+					<age type="modified" direction="olderThan" in="minutes">2880</age> <!-- 2 days -->
+				</fileset>
+			</validate>
+		</job>	
+	</jobList>
+	<scheduling>
+		<startAt date="immediate"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="1"/>  			
+	</scheduling>
+	<notification>
+		<email>
+			<mailserver>mailapp.telecom.pt</mailserver>
+	 		<sender description="Serviço Fatura Eletrónica">fatura@telecom.pt</sender>
+	 		<replyTo>stfe-ptc@telecom.pt</replyTo>
+	 		<to>nuno-p-lourenco@telecom.pt</to>
+	 		<cc></cc>
+		</email>
+		<messaging>
+			<!-- TODO -->
+		</messaging>
+		<sms>
+			<!-- TODO -->
+		</sms>
+		<openview>
+			<!-- TODO -->
+			<webservice></webservice>
+			<ovo></ovo>
+		</openview>
+		<nagios>
+			<!-- TODO -->
+		</nagios>
+	</notification>
+</service>

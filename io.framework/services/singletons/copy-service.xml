@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service name="copy-files" description="" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="copy" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ListJob">
+			<sources>
+				<from>C:\Temp\project\eDocsIOF\sourceNFS</from>
+			</sources>
+			<destinations>
+				<to>C:\Temp\project\eDocsIOF\DeliveryFinishing\B2C\*{Date.yyyy}*{Date.MM}</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PTCASA.CLIP.(\d){2}.(\d){6}.((\w|.)+).(DATA|RES|CTL)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>	
+	</jobList>
+</service>

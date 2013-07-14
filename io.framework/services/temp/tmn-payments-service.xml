@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] TMN smsFE and smsPayments files
+	@date 		20120612
+	@documentation:
+		1)  Scans NFS source files for sms payments (PAYMENTS*.SMS) files
+		2)  Renames for SONI  
+-->
+<service name="TMN.payments.rename" description="" domain="EddieMobile">
+	<jobList type="sequential">		
+		<job name="tmn-sms: copy sms payment files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>C:\Temp\project\iof\source</from>
+			</sources>
+			<destinations>
+				<to>C:\Temp\project\iof\destination\soni_contacts_574_*{Date.yyyyMMddHHmmSS}.txt</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PAYMENTS.TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.SMS$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>	
+	</jobList>
+</service>

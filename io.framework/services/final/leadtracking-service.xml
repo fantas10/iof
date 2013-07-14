@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		STFE
+	@title 		leadtracking service
+	@date 		20130531
+	@documentation:
+		Leadtracking Service
+		
+		Executar 1xdia às 10h00
+		
+-->
+<service name="leadtracking-service" description="" domain="EddieMacBook">
+	<jobList type="sequential">
+		<job name="ftp-get: Copy from leadtracking" scope="internal" nature="transfer" type="pt.ptsi.stfe.transfer.GetJob">
+			<site server="83.240.175.81" username="feleadtr" password="fe2010tr" protocol="sftp" />
+			<sources>
+				<from>/feleadtr/input</from>
+			</sources>	
+			<destinations>
+				<to>/Users/eddie/Development/devWorks/io.framework/Leadtracking</to>
+				<to>/Users/eddie/Development/devWorks/io.framework/Leadtracking/Backup2</to>
+			</destinations>
+			<filterOptions>
+				<filter>^GTE_BLG_\d{10}_\d{8}.dat$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>	
+		<job name="backup: Backup Leadtracking files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>/Users/eddie/Development/devWorks/io.framework/Leadtracking/Backup</from>
+			</sources>
+			<destinations>
+				<to>/Users/eddie/Development/devWorks/io.framework/Leadtracking/Backup/lead_*{Date.yyyy}*{Date.MM}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^GTE_BLG_\d{10}_\d{8}.dat$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>
+		<job name="Edocs Leadtracking_Input exec" scope="extension" nature="extension" type="pt.ptsi.stfe.connectors.edocs.IOEDocsConnector">
+			<context>
+				<host port="8102">10.50.57.160/</host>
+				<ddn>TMN_DOCS</ddn>
+				<edocsjob>Leadtracking_Input</edocsjob>
+			</context>
+		</job>
+<!-- 		
+		<!- - WIRELESS - ->
+		<job name="copy" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>Z:\PRD_TMN_Output_TMP\Leadtracking</from>
+			</sources>
+			<destinations>
+				<to>Z:\PRD_TMN_Output_TMP\Leadtrackin\Processed</to>
+			</destinations>
+			<filterOptions>
+				<filter>^GTE_BLG_\d{9}_\d{8}.dat$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>			
+		<job name="sftp-put: SFTP to Destination" scope="internal" nature="transfer" type="pt.ptsi.stfe.transfer.PutJob">
+			<site server="10.162.205.100" username="feleadtr" password="fe2010tr" protocol="sftp" />
+			<sources>
+				<from>Z:\PRD_TMN_Output_TMP\Leadtracking</from>
+			</sources>
+			<destinations>
+				<to>/feleadtr/output/wireless</to>
+			</destinations>
+			<filterOptions>
+				<filter>^GTE_BLG_\d{9}_\d{8}.dat$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+		<!- - WIRELINE - ->
+		<job name="copy" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>X:\B2B\Data\Leadtracking</from>
+			</sources>
+			<destinations>
+				<to>X:\B2B\Data\Leadtracking\Processed</to>
+			</destinations>
+			<filterOptions>
+				<filter>^GTE_BLG_\d{9}_\d{8}.dat$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>	
+		<job name="sftp-put: SFTP to Destination" scope="internal" nature="transfer" type="pt.ptsi.stfe.transfer.PutJob">
+			<site server="10.162.205.100" username="feleadtr" password="fe2010tr" protocol="sftp" />
+			<sources>
+				<from>X:\B2B\Data\Leadtracking</from>
+			</sources>
+			<destinations>
+				<to>/feleadtr/output/wireline</to>
+			</destinations>
+			<filterOptions>
+				<filter>^GTE_BLG_\d{9}_\d{8}.dat$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+-->
+	</jobList>
+	<scheduling>
+		<startAt date="immediate"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="1"/> 			
+
+		<!-- ex: 0 0 12 ? * MON,WED,FRI == every Monday,Wednesday,Friday at 12:00:00 pm -->
+		<!-- everyday, 5 in 5 minutes -->	
+		<!-- <cronExpression>0 0/5 * * * ?</cronExpression>	 
+		 -->
+	</scheduling>	
+
+</service>

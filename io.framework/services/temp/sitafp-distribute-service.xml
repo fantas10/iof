@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] SIT AFP Distribution
+	@date 		20120523
+	@documentation:
+		1)  Scans NFS source files for afp (complete, tot, res, data, msg.txt) and unzips them 
+		2)  Zip files to Backup
+		4)  Moves to OA destination folder (DeliveryFinishing)
+		5)  Notifies all
+-->
+<service name="SIT-AFP-Distribution" 
+	description="Copies and Backups AFP files to Finishing delivery for OA/Websupport" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="sit-afp: Unzip SIT Files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.UnzipJob">
+			<sources>
+				<from password="cLip">F:\zip\PTPrime</from>
+			</sources>
+			<destinations>
+				<to>F:\zip\PTPrime</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(SIT.(\d){3}.(\d){6}.(\w|.)+.ZIP)|(SIT.(\d){3}.COMPLETE.ZIP)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>	
+		<job name="sit-afp: Zip SIT files to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\zip\PTPrime</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\SIT\*{Date.yyyy}*{Date.MM}\*{File[0,7]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^SIT.(\d){3}.(\w|.)*(COMPLETE|TOT|RES|DATA|CTL|MSG.TXT)$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>	
+		<job name="sit-afp: Serialize CTL" scope="extension" nature="extension" type="pt.ptsi.stfe.connectors.ctl.SerializeCTL">
+			<datasource type="hibernate" name="SerializeCtlDS">
+				<properties>
+					<property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+					<property name="hibernate.connection.url">jdbc:sqlserver://10.50.57.73:1433;databaseName=STControlDB</property>
+					<property name="hibernate.connection.username">ST</property>
+					<property name="hibernate.connection.password">STControl</property>
+					<property name="hibernate.default_schema">ST</property>
+					<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+					<!-- <property name="hibernate.show_sql">true</property> -->
+					<property name="hibernate.connection.pool_size">1</property>
+					<property name="hibernate.connection.autocommit">true</property>
+					<property name="hibernate.current_session_context_class">thread</property>
+				</properties>
+				<mappings>
+					<mapping>D:\STFE\IOF\extensions\resources\DmCtlContent.hbm.xml</mapping>
+					<mapping>D:\STFE\IOF\extensions\resources\DmCtlFile.hbm.xml</mapping>
+				</mappings>
+			</datasource>
+			<sources>
+				<from>F:\zip\PTPrime</from>
+			</sources>	
+			<filterOptions>
+				<filter>^SIT.(\d){3}.(\d){6}.(\w|.)+CTL$</filter>   
+			</filterOptions>						
+		</job>				
+ 		<job name="sit-afp: Copy to Delivery" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\zip\PTPrime</from>
+			</sources>
+			<destinations>
+				<to>J:\DeliveryFinishing\SIT</to>
+			</destinations>
+			<filterOptions>
+				<filter>^SIT.(\d){3}.(\w|.)*(COMPLETE|TOT|RES|DATA|CTL|MSG.TXT)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>
+		<job name="sit-afp: Create StreamA2P Resources" scope="extension" nature="extension" type="pt.ptsi.stfe.connectors.resources.CreateStreamA2PResources">
+			<environment>
+				<context server="t3://10.50.57.161:8002" user="system" password="weblogic" jndiFactory="weblogic.jndi.WLInitialContextFactory" jndiObject="edx.ptb.ejb.VersionManager" />
+				<edxHome>\\tpknt82\d$\b2b\edocs\TBM\estatement</edxHome>
+				<ddn>PTEMPRESA_AFP</ddn>
+				<views>
+					<view name="invoicePDF_SIT" />
+					<view name="invoicePDF_SIT_copy" />
+					<view name="invoicePDF_SIT_reissue" />									
+				</views>
+				<!-- <date>2009-08-07 14:40:10.000</date>  --><!-- optional -->
+			</environment>		
+			<sources>
+				<from>J:\DeliveryFinishing\SIT</from>
+			</sources>		
+			<filterOptions>
+				<filter>^SIT.(\d){3}.(\d){6}.(\w|.)+RES$</filter>
+			</filterOptions>
+		</job>					
+ 		<job name="sit-afp: Move Resources and Jars" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>J:\DeliveryFinishing\SIT</from>
+			</sources>
+			<destinations>
+				<to>E:\AFP Resources\PTEMPRESA_AFP\RES</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(SIT.(\d){3}.(\d){6}.(\w|.)+RES|StreamA2P_SIT.(\d){3}.(\d){6}.(\w|.)+jar)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+	</jobList>
+	<scheduling>
+		<startAt date="immediate"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="1"/> 			
+	</scheduling>	
+</service>

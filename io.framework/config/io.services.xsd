@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://facturaelectronica.telecom.pt/xsd/ioservices" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://facturaelectronica.telecom.pt/xsd/ioservices">
+    <element name="service" type="string"></element>
+
+    <element name="transfer" type="tns:transferType"></element>
+    
+    <complexType name="transferType">
+    	<sequence minOccurs="1" maxOccurs="1">
+    		<element name="protocol">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="FTP"></enumeration>
+    					<enumeration value="FTPS"></enumeration>
+    					<enumeration value="SFTP"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="server">
+    			<simpleType>
+    				<restriction base="string">
+    					<pattern
+    						value="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}$">
+    					</pattern>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    	</sequence>
+    	<attribute name="type">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="import"></enumeration>
+    				<enumeration value="export"></enumeration>
+    				<enumeration value="list"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+    
+
+    <complexType name="ipAddress"></complexType>
+
+    <complexType name="userType">
+    	<sequence>
+    		<element name="username" type="string"></element>
+    		<element name="password" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="transferTargetType">
+    	<attribute name="sourceDirectory" type="string"></attribute>
+    	<attribute name="destinationDirectory" type="string"></attribute>
+    </complexType>
+
+    <complexType name="remoteFilesType">
+    	<sequence>
+    		<element name="target" type="tns:transferTargetType"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="serviceType"></complexType>
+</schema>

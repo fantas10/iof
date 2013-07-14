@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		PFE Leadtracking Export Service
+	@date 		20120104
+	@documentation:
+		1) Transfer SFTP from PFE to ETF Leadtracking Area (wireless)
+			Host: 		10.162.205.100:21
+			Username:	feleadtr
+			Password:   fe2010tr
+			From:  		Z:\PRD_TMN_Output_TMP\Leadtracking  
+			To:    		/feleadtr/output/wireless
+			
+		2)  Transfer SFTP from PFE to ETF Leadtracking Area (wireline)
+			From: 		X:\B2B\Data\Leadtracking 
+			To:			/feleadtr/output/wireline
+			
+
+-->
+<service name="PFE Leadtracking Integration - Export Service" 
+	description="Imports metadata from leadtracking ETF to Index (TMN_DOCS:Leadtracking_Input)" domain="FEProduction">
+	
+
+
+
+</service>

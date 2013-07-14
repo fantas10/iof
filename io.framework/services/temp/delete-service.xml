@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		Delete Sample 
+	@documentation:
+-->
+<service name="deleteSample" description="Zip files to Backup, delete on source, maintainance on backup" domain="EddieMobile">
+	<jobList type="sequential">
+		<job scope="internal" nature="archive" name="deleteSample" type="pt.ptsi.stfe.archive.DeleteJob">
+			<sources>
+				<from gauge="2">C:\Temp\project\iof\source</from>
+			</sources>
+			<filterOptions>
+				<filter>^TMN.(\d){3}.(\d){8}.((\d){2,3}.TODAS)*.(DATA|COMPLETE|RES)$</filter>
+				<!-- atMost|atLeast -->
+				<size direction="atMost">0</size> <!-- in bytes -->
+				<!-- created|modified -->
+				<!-- in seconds from right now! -->
+				<age type="modified" direction="olderThan" in="minutes">86400</age> <!-- 2 days -->
+			</filterOptions>
+		</job>
+	</jobList>
+
+	<!-- Scheduling always via Quartz -->
+	<scheduling>
+		<!-- date supplied. if no date supplied or no element defined will startAt now! -->
+		<startAt date="immediate"/>
+			
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="minutes" value="1"/> 			
+	</scheduling>
+
+	<notification>
+	</notification>
+	
+	<log>
+	</log>
+
+</service>

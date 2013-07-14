@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		IOF Archiving Sample 
+	@date 		20111209
+	@documentation:
+		1)  This service scans input dir for files matching regex
+		2)  Zips them individually to Output Dir (Backup Dir)
+		3)  Deletes files on source (matching regex)
+		4)  Historic Maintainance (Deletes older files on BackupDir)
+-->
+<service name="archivingSample" description="Zip files to Backup, delete on source, maintainance on backup" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="Zip Job #1" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>C:\Temp\project\iof\source</from>
+			</sources>
+			<destinations>
+				<!-- <to>C:/Temp/project/iof/destination/*{Date.yyyy}/*{Date.MM}/PTEMPRESA.*{File[15,17]}-*{File[20,24]}.zip</to> -->
+				<!-- <to>C:\Temp\project\iof\destination\bundle.zip</to>  --> 
+				<to>C:\Temp\project\iof\destination\*{Date.yyyy}\*{File[22,31]}\bundle*{File[11,21]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(\w+)_(\d+)_(\d+).xml$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>
+		<job name="Zip Job #2" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>C:\Temp\project\iof\source</from>
+			</sources>
+			<destinations>
+				<!-- <to>C:/Temp/project/iof/destination/*{Date.yyyy}/*{Date.MM}/PTEMPRESA.*{File[15,17]}-*{File[20,24]}.zip</to> -->
+				<!-- <to>C:\Temp\project\iof\destination\bundle.zip</to>  --> 
+				<to>C:\Temp\project\iof\destination\*{Date.yyyy}\*{File[25,34]}\bundle*{File[14,24]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(\w+)_(\w+)_(\d+).xml$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+	</jobList>
+
+
+	<!-- Scheduling always via Quartz -->
+	<scheduling>
+		<!-- date supplied. if no date supplied or no element defined will startAt now! -->
+		<startAt date="immediate"/>
+		
+		<!-- one of cronExpression or interval -->
+		<!-- <cronExpression>0 0/5 * * * ?</cronExpression>  --><!-- ex: 0 0 12 ? * MON,WED,FRI == every Monday,Wednesday,Friday at 12:00:00 pm -->
+		
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="minutes" value="1"/> 			
+	</scheduling>
+
+	<!-- notification 
+		.sendEmail
+		.web-service call
+		.jms event
+		.database
+	-->
+	<notification>
+	</notification>
+	
+	<!-- log4j: what to put here... ? -->
+	<log>
+	</log>
+
+</service>

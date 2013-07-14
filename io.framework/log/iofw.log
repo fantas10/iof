@@ -1,0 +1,59 @@
+2013-07-05 02:07:21,068 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-05 02:07:25,974 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-05 02:10:48,972 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-05 02:10:55,392 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-05 02:12:17,039 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-05 02:12:17,525 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-05 02:13:34,261 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-05 02:13:34,704 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-05 02:13:36,343 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [default]:[null]:eDocs-Samples:-1539857412 Workflow took : 00:00:00 236 . with status=OK
+2013-07-05 17:12:16,255 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-05 17:48:42,660 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-05 17:48:53,407 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-221347236/sftp-put: Zip to Backup: /Users/eddie/Development/devWorks/io.framework/Leadtracking/processed/2013_07.Leadtracking-Wireline.zip/GTE_BLG_0000000001_20130601.dat
+2013-07-05 17:48:53,407 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-221347236 DIDN'T FINISH but took 00:00:00 339 . with status=ERROR
+2013-07-05 17:49:06,558 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-05 17:55:18,493 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon

@@ -1,0 +1,23 @@
+2013-06-04 11:43:34,921 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-04 11:43:37,399 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-1403268091/sftp-get: SFTP to Destination: No such directory
+2013-06-04 11:43:37,399 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-1403268091 DIDN'T FINISH but took 00:00:00 541 . with status=ERROR
+2013-06-04 11:43:37,609 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-04 12:21:11,190 [IOEngine] INFO  pt.ptsi.stfe.io.engine.IOEngine - ===> STOPPED Engine & Monitor With Success!!...
+2013-06-04 12:21:11,200 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT shutting down daemon
+2013-06-04 15:55:18,250 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-04 15:55:21,306 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-1403268091 Workflow took : 00:00:00 988 . with status=OK
+2013-06-04 15:55:21,534 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-04 15:58:54,214 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-04 15:59:40,717 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-04 15:59:43,645 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-1403268091 Workflow took : 00:00:01 000 . with status=OK
+2013-06-04 15:59:43,815 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-04 16:14:54,585 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-04 16:15:01,267 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-1403268091 Workflow took : 00:00:04 776 . with status=OK
+2013-06-04 16:15:01,431 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-04 16:19:18,013 [DefaultQuartzScheduler_Worker-2] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-221347236 Workflow took : 00:00:07 099 . with status=OK
+2013-06-04 16:19:18,022 [DefaultQuartzScheduler_Worker-2] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-04 16:21:37,416 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-06-04 16:21:43,859 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-1403268091 Workflow took : 00:00:04 539 . with status=OK
+2013-06-04 16:21:44,046 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-06-04 16:25:32,939 [IOEngine] INFO  pt.ptsi.stfe.io.engine.IOEngine - ===> STOPPED Engine & Monitor With Success!!...
+2013-06-04 16:25:32,944 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT shutting down daemon

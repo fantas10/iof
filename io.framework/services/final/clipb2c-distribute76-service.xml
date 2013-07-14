@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] CLIP Distribution B2B and B2C
+	@date 		20120312
+	@documentation:
+		1)  Scans NFS source files after transfer from finishing
+		2)  Zips all files to single Backup Zip File (Context: Billing Cycle)
+		3)  Moves and Unzips to OA destination folder
+		4)  Creates Resource Jar for each RES included
+				- gets latest jar view
+		5)  Serializes CTL Info to database
+		6)  Notifies all
+-->
+<service name="clip-distribution" description="Prepares all CLIP files from Finishing to OA/Websupport" domain="FEProduction">
+	<jobList type="sequential">
+	 	
+		<job name="b2c: Unzip CLIP Files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.UnzipJob">
+			<sources>
+				<from password="cLip">E:\IOFTester\IOF\sourceNFS</from>
+			</sources>
+			<destinations>
+				<to>E:\IOFTester\IOF\sourceNFS</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PTCASA.CLIP.(\d){2}.(\d){6}.((\w|.)+).zip$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>	
+		<job name="b2c: Zip to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>E:\IOFTester\IOF\sourceNFS</from>
+			</sources>
+			<destinations>
+				<to>E:\IOFTester\IOF\Backup\*{File[0,6]}\*{Date.yyyy}\*{Date.MM}\*{File[0,21]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PTCASA.CLIP.(\d){2}.(\d){6}.((\w|.)+).(DATA|RES|CTL)$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>
+ 		<job name="b2c: Copy to Delivery" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>E:\IOFTester\IOF\sourceNFS</from>
+			</sources>
+			<destinations>
+				<to>E:\IOFTester\IOF\DeliveryFinishing\B2C\</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PTCASA.CLIP.(\d){2}.(\d){6}.((\w|.)+).(DATA|RES|CTL)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>
+		<job name="b2c: Create StreamA2P Resources" scope="extension" nature="extension" type="pt.ptsi.stfe.connectors.resources.CreateStreamA2PResources">
+			<environment>
+				<context server="t3://10.50.7.42:8002" user="weblogic" password="weblogic" jndiFactory="weblogic.jndi.WLInitialContextFactory" jndiObject="edx.pt.ejb.VersionManager" />
+				<edxHome>E:\IOFTester\IOF\b2cHome</edxHome>
+				<ddn>PTCASA_AFP</ddn>
+				<views>
+					<view name="invoicePDF" />										
+				</views>
+				<!-- <date>2009-08-07 14:40:10.000</date>  --><!-- optional -->
+			</environment>		
+			<sources>
+				<from>E:\IOFTester\IOF\DeliveryFinishing\B2C\</from>
+			</sources>		
+			<filterOptions>
+				<filter>^PTCASA.CLIP.(\d){2}.(\d){6}.((\w|.)+).RES$</filter>
+			</filterOptions>
+		</job>	
+		<job name="b2b: Serialize CTL" scope="extension" nature="extension" type="pt.ptsi.stfe.connectors.ctl.SerializeCTL">
+			<datasource type="hibernate" name="SerializeCtlDS">
+				<properties>
+					<property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+					<property name="hibernate.connection.url">jdbc:sqlserver://10.50.57.73:1433;databaseName=STControlDB</property>
+					<property name="hibernate.connection.username">ST</property>
+					<property name="hibernate.connection.password">STControl</property>
+					<property name="hibernate.default_schema">ST</property>
+					<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+					<!-- <property name="hibernate.show_sql">true</property> -->
+					<property name="hibernate.connection.pool_size">1</property>
+					<property name="hibernate.current_session_context_class">thread</property>
+				</properties>
+				<mappings>
+					<mapping>E:\IOF\extensions\resources\DmCtlContent.hbm.xml</mapping>
+					<mapping>E:\IOF\extensions\resources\DmCtlFile.hbm.xml</mapping>
+				</mappings>
+			</datasource>
+			<sources>
+				<from>E:\IOFTester\IOF\DeliveryFinishing\B2C\</from>
+			</sources>	
+			<filterOptions>
+				<!-- <filter>^PTEMPRESA.CLIP.(\d){2}.(\d){6}.((\w|.)+).CTL$</filter> -->
+				<filter>^PTCASA.CLIP.(\d){2}.(\d){6}.((\w|.)+).CTL$</filter> 
+				<!-- <filter>^TMN02.(\w){3}.(\d){8}.((\w|.)+).CTL$</filter>  -->  
+			</filterOptions>						
+		</job>			
+	</jobList>
+	<!-- Scheduling via Quartz -->
+<!--
+	<scheduling>
+		<startAt date="immediate"/>
+		<interval in="minutes" value="1"/> 			
+	</scheduling>
+-->
+</service>

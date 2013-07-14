@@ -1,0 +1,15 @@
+2013-07-03 15:24:27,923 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-03 15:24:49,449 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Operation timed out
+2013-07-03 15:24:49,449 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:19 275 . with status=ERROR
+2013-07-03 15:24:49,671 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-03 15:30:51,708 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-03 15:31:14,353 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Read timed out
+2013-07-03 15:31:14,353 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:20 593 . with status=ERROR
+2013-07-03 15:31:14,567 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-03 15:31:28,689 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-03 15:31:45,444 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 Workflow took : 00:00:14 783 . with status=OK
+2013-07-03 15:31:45,653 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-03 15:36:09,660 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-03 15:36:36,141 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Failure writing to local file.
+2013-07-03 15:36:36,141 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:24 545 . with status=ERROR
+2013-07-03 15:36:36,373 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!

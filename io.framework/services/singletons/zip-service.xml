@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		STFE
+	@title 		List sources for specific match
+	@date 		20120831
+	@documentation:
+		- Zips files
+-->
+<service name="zip-files" description="zips files with filter selection" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="zip: Zip Files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>C:\Temp\project\eDocsIOF\sourceNFS</from>
+			</sources>
+			<destinations>
+				<to>C:\Temp\project\eDocsIOF\sourceNFS\PTCASA.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PTCASA.CLIP.(\d){2}.(\d){6}.((\w|.)+).(DATA|RES|CTL)$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource>
+		</job>	
+	</jobList>
+	<scheduling>
+		<startAt date="immediate"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="1"/>  			
+	</scheduling>
+</service>

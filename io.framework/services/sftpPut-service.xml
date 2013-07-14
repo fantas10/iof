@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		STFE
+	@title 		sftp helloWorld
+	@date 		20130529
+	@documentation:
+		- SFTP put
+-->
+<service name="sftp-put-files" description="" domain="EddieMacBook">
+	<jobList type="sequential">
+		<job name="sftp-put: SFTP to Destination" scope="internal" nature="transfer" type="pt.ptsi.stfe.transfer.PutJob">
+			<site server="83.240.175.81" username="yetfe" password="gkv2dy2nYH" protocol="sftp" />
+			<sources>
+				<from>/Users/eddie/Development/devWorks/io.framework/Leadtracking</from>
+			</sources>
+			<destinations>
+				<to>/yetfe/outbound/testing/2/</to>
+			</destinations>
+			<filterOptions>
+				<filter>^GTE_BLG_\d{10}_\d{8}.dat$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>	
+	</jobList>
+</service>

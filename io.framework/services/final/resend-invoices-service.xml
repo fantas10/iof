@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		IOF Multicert Resend Invoices
+	@date 		20111209
+	@documentation:
+		Copies from source directory to Multicert Resend Directory
+-->
+<service name="SEEF Resender" description="Resends Invoices" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="resend-CLIP" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from gauge="10">C:\Temp\project\iof\ubl\common_ubl</from>
+			</sources>
+			<destinations>
+				<to>C:\Temp\project\iof\ubl\clip_ubl</to>
+			</destinations>
+			<deleteOnSource>true</deleteOnSource>
+		</job>	
+	</jobList>
+</service>

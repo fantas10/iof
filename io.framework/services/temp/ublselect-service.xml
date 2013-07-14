@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		STFE
+	@title 		IOF UBL Selection Input and Indexer
+	@date 		20111209
+	@documentation:
+		1)  This service scans B2BBatch PTEmpresa::MassMail "UBL Output Dir". In this directory there will be
+			CLIP & SIT Ubl files that should be split for CRM CLIP_UBL::UBLIndexer "Input File Path" and
+			CRM SIT_UBL::UBLIndexer "Input File Path".
+		2)  After the split and move, it will run the  CRM CLIP_UBL::UBLIndexer and the CRM SIT_UBL::UBLIndexer
+			if it has files in each input
+-->
+<service name="ublSplitAndIndex" description="Splits common ubl input from PTEmpresa:MassMail and indexes them in CRM instance" domain="FEProduction">
+	<jobList type="sequential">
+		<job scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<!-- <from>U:\PRD_CRM_Input\Common_UBL</from>  -->
+				<from>C:\Temp\project\iof\ubl\common_ubl</from>
+			</sources>
+			<destinations>
+				<!-- <to>U:\PRD_CRM_Input\CLIP_UBL\</to>  -->
+				<to>C:\Temp\project\iof\ubl\clip_ubl</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(\\d+)_(\\d+)_PTEMPRESA.CLIP.(\\d+)[2].(\\d+)[6].EMAIL.CTL.ubl$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>
+		</job>
+		<job scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<!-- <from>U:\PRD_CRM_Input\Common_UBL</from>   -->
+				<from>C:\Temp\project\iof\ubl\common_ubl</from>
+			</sources>
+			<destinations>
+				<!--  <to>U:\PRD_CRM_Input\SIT_UBL</to>  -->
+				<to>C:\Temp\project\iof\ubl\sit_ubl</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(\\d+)_SIT.(\\d+)[3].(\\d+)[6].[a-zA-Z_0-9.]+.ubl$</filter>
+			</filterOptions>			
+			<deleteOnSource>true</deleteOnSource>
+		</job>		
+	</jobList>
+</service>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] IAA / WBE Distribution (Online and AFP)
+	@date 		20120523
+	@documentation:
+		1)  Scans NFS source files for WBE Online (*.IAA, *.WBE, *.CTR) and AFP (*.CTL, *.DATA, *.RES)
+		2)  Zip files to Backup
+		3)  Serialize CTLs
+		4)  Moves to OA destination folder (DeliveryFinishing) Onlines and AFPs
+		5)  Notifies all
+-->
+<service name="WBE-IAA-Distribution" description="Copies data files to Finishing delivery for OA/Websupport" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="WBEIAA: Copy to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\zip\IAA</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\__toZipBackup</to>
+			</destinations>
+			<filterOptions>
+				<filter>^EMAIL.(WBE|IAA).D(\d){6}.H(\d){6}.(CTL|RES|DATA|TOT|COMPLETE|WBE|IAA|CTR)$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>
+		<job scope="internal" name="WBEIAA: delete 0kb files" nature="archive"  type="pt.ptsi.stfe.archive.DeleteJob">
+			<sources>
+				<from>F:\zip\IAA</from>
+			</sources>
+			<filterOptions>
+				<filter>^EMAIL.(WBE|IAA).D(\d){6}.H(\d){6}.(CTL|RES|DATA|WBE|IAA|CTR)$</filter>
+				<size direction="atMost">0</size>
+			</filterOptions>
+		</job>	
+		<job scope="internal" name="WBEIAA: delete .tot and .complete files" nature="archive"  type="pt.ptsi.stfe.archive.DeleteJob">
+			<sources>
+				<from>F:\zip\IAA</from>
+			</sources>
+			<filterOptions>
+				<filter>^EMAIL.(WBE|IAA).D(\d){6}.H(\d){6}.(TOT|COMPLETE)$</filter>
+			</filterOptions>
+		</job>			
+		<job name="WBEIAA: Serialize CTL" scope="extension" nature="extension" type="pt.ptsi.stfe.connectors.ctl.SerializeCTL">
+			<datasource type="hibernate" name="SerializeCtlDS">
+				<properties>
+					<property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+					<property name="hibernate.connection.url">jdbc:sqlserver://10.50.57.73:1433;databaseName=STControlDB</property>
+					<property name="hibernate.connection.username">ST</property>
+					<property name="hibernate.connection.password">STControl</property>
+					<property name="hibernate.default_schema">ST</property>
+					<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+					<!-- <property name="hibernate.show_sql">true</property> -->	
+					<property name="hibernate.connection.pool_size">1</property>
+					<property name="hibernate.connection.autocommit">true</property>
+					<property name="hibernate.current_session_context_class">thread</property>
+				</properties>
+				<mappings>
+					<mapping>D:\STFE\IOF\extensions\resources\DmCtlContent.hbm.xml</mapping>
+					<mapping>D:\STFE\IOF\extensions\resources\DmCtlFile.hbm.xml</mapping>
+				</mappings>
+			</datasource>
+			<sources>
+				<from>F:\zip\IAA</from>
+			</sources>	
+			<filterOptions>
+				<filter>^EMAIL.(WBE|IAA).D(\d){6}.H(\d){6}.CTL$</filter>   
+			</filterOptions>						
+		</job>		
+ 		<job name="WBEIAA: ONLINE Copy to Delivery" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\zip\IAA</from>
+			</sources>
+			<destinations>
+				<to>J:\DeliveryFinishing\IAAWBE\preprocessor</to>
+			</destinations>
+			<filterOptions>
+				<filter>^EMAIL.(WBE|IAA).D(\d){6}.H(\d){6}.(WBE|IAA|CTR)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>	
+ 		<job name="WBEIAA: AFP Copy to Delivery" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\zip\IAA</from>
+			</sources>
+			<destinations>
+				<to>J:\DeliveryFinishing\IAAWBE</to>
+			</destinations>
+			<filterOptions>
+				<filter>^EMAIL.(WBE|IAA).D(\d){6}.H(\d){6}.(CTL|RES|DATA|TOT|COMPLETE)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>	
+		<job name="WBEIAA: Create StreamA2P Resources for *.RES" scope="extension" nature="extension" type="pt.ptsi.stfe.connectors.resources.CreateStreamA2PResources">
+			<environment>
+				<context server="t3://10.50.57.161:8002" user="system" password="weblogic" jndiFactory="weblogic.jndi.WLInitialContextFactory" jndiObject="edx.ptb.ejb.VersionManager" />
+				<edxHome>\\tpknt82\d$\b2b\edocs\TBM\estatement</edxHome>
+				<ddn>PTEMPRESA_IAA_AFP</ddn>
+				<views>
+					<view name="invoicePDF" />
+					<view name="invoicePDF_copy" />
+					<view name="invoicePDF_reissue" />																				
+				</views>
+			</environment>		
+			<sources>
+				<from>J:\DeliveryFinishing\IAAWBE</from>
+			</sources>		
+			<filterOptions>
+				<filter>^EMAIL.(WBE|IAA).D(\d){6}.H(\d){6}.RES$</filter>
+			</filterOptions>
+		</job>	
+ 		<job name="WBEIAA: Move Resources and Jars" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>J:\DeliveryFinishing\IAAWBE</from>
+			</sources>
+			<destinations>
+				<to>E:\AFP Resources\PTEMPRESA_IAA_AFP\RES</to>
+			</destinations>
+			<filterOptions>
+				<filter>((^EMAIL.(WBE|IAA).D(\d){6}.H(\d){6}.RES$)|(^StreamA2P_EMAIL.(WBE|IAA).D(\d){6}.H(\d){6}((\w|.|_)*).jar$))</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+	</jobList>
+	<scheduling>
+		<startAt date="immediate"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="1"/> 			
+	</scheduling>	
+</service>

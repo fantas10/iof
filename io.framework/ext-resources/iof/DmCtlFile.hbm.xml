@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 12, 2012 5:06:02 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pt.ptsi.stfe.connectors.ctl.db.DmCtlFile" table="iof_ctlFilesQA">
+        <id name="fileId" type="int">
+            <column name="fileId" />
+            <generator class="identity" />
+        </id>
+        <natural-id mutable="false">
+        	<property name="fileName" type="java.lang.String"/>
+        </natural-id>
+        <property name="timesProcessed" type="int">
+        	<column name="timesProcessed" />
+        </property>       
+        <property name="carrier" type="java.lang.String">
+        	<column name="carrier"/>
+        </property>
+        <property name="companyId" type="int">
+        	<column name="companyId" />
+        </property>       
+        <property name="billingName" type="java.lang.String">
+        	<column name="billingName" />
+        </property>        
+        <property name="cycle" type="java.lang.String">
+        	<column name="cycle" />
+        </property>
+        <property name="portion" type="java.lang.String">
+        	<column name="portion" />
+        </property>        
+        <property name="month" type="java.lang.String">
+        	<column name="month" />
+        </property>
+        <property name="year" type="java.lang.String">
+        	<column name="year" />
+        </property>                     
+        <property name="numInvoices" type="int">
+            <column name="numInvoices" />
+        </property>
+        <property name="dateInserted" type="java.util.Date">
+            <column name="dateInserted" />
+        </property>
+        <property name="dateProcessed" type="java.util.Date">
+            <column name="dateProcessed" />
+        </property>        
+        <property name="dateReported" type="java.util.Date">
+            <column name="dateReported" />
+        </property>
+    </class>
+</hibernate-mapping>

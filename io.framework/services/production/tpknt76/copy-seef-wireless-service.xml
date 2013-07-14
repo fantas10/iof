@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[SEEF MULTICERT] Copy TMN SEEF Xmls to OUTPUT
+	@date 		20120927
+	@documentation:
+		1) Copies to Backup and to Output a preselected number o SEEF Messages (*.xml)
+-->
+<service name="Copy-SEEF-WIRELESS" description="Copies SEEF xml files to output, doing also a backup" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="SEEF/Wireless TMN: Copy to Output" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from gauge="100">N:\MULTICERT\500k\500KWLS125ATTCH102012</from>
+				<from gauge="100">N:\MULTICERT\500k\500KWLS125NO102012</from>
+			</sources>
+			<destinations>
+				<to>X:\Multicert\Wireless\output\seef1-send</to>
+				<to>B:\BackupMulticert\500k\TMN\*{Date.yyyyMM}\*{File[0,12]}</to>				
+			</destinations>
+			<filterOptions>
+				<filter>^(\w+)_(\w+)_(\d+).xml$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>
+	</jobList>
+	<scheduling>
+		<startAt date="2012-06-18 00:00:01"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="minutes" value="6"/> <!-- 6 minutes --> 			
+	</scheduling>		
+</service>

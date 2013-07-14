@@ -1,0 +1,26 @@
+2013-05-30 13:25:32,787 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-05-30 13:26:01,908 [IOEngine] INFO  pt.ptsi.stfe.io.engine.IOEngine - ===> STOPPED Engine & Monitor With Success!!...
+2013-05-30 13:26:01,912 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT shutting down daemon
+2013-05-30 13:26:50,202 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-05-30 13:26:52,486 [DefaultQuartzScheduler_Worker-1] WARN  pt.ptsi.stfe.io.engine.IOEngine - Ended Zip Session : zipped 0 files... Took 00:00:00 182
+2013-05-30 13:27:08,846 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-221347236/sftp-put: null
+2013-05-30 13:27:14,351 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-221347236 DIDN'T FINISH but took 00:00:22 050 . with status=ERROR
+2013-05-30 13:27:16,394 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-05-30 13:27:42,289 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-05-30 13:27:44,313 [DefaultQuartzScheduler_Worker-1] WARN  pt.ptsi.stfe.io.engine.IOEngine - Ended Zip Session : zipped 0 files... Took 00:00:00 138
+2013-05-30 13:28:11,685 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-221347236/sftp-put: null
+2013-05-30 13:28:54,835 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-05-30 13:28:57,018 [DefaultQuartzScheduler_Worker-1] WARN  pt.ptsi.stfe.io.engine.IOEngine - Ended Zip Session : zipped 0 files... Took 00:00:00 151
+2013-05-30 13:29:36,507 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-05-30 13:29:38,538 [DefaultQuartzScheduler_Worker-1] WARN  pt.ptsi.stfe.io.engine.IOEngine - Ended Zip Session : zipped 0 files... Took 00:00:00 144
+2013-05-30 13:30:37,293 [DefaultQuartzScheduler_Worker-1] WARN  pt.ptsi.stfe.io.engine.IOEngine - ended execution, took 00:00:58 753
+2013-05-30 13:30:37,293 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-221347236 Workflow took : 00:00:58 903 . with status=NOACTION
+2013-05-30 13:36:08,132 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-05-30 13:36:10,283 [DefaultQuartzScheduler_Worker-1] WARN  pt.ptsi.stfe.io.engine.IOEngine - Ended Zip Session : zipped 0 files... Took 00:00:00 144
+2013-05-30 13:38:36,324 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-05-30 13:40:29,682 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-05-30 13:41:26,577 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-05-30 13:42:36,148 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-05-30 13:44:31,113 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-05-30 13:45:01,343 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:sftp-put-files:-221347236 Workflow took : 00:00:28 331 . with status=OK
+2013-05-30 13:45:01,552 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!

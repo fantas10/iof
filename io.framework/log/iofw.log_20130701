@@ -1,0 +1,311 @@
+2013-07-01 15:29:29,751 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 15:29:59,460 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 15:29:59,460 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:27 238 . with status=ERROR
+2013-07-01 15:29:59,706 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 15:34:34,971 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 15:34:47,723 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: null
+2013-07-01 15:34:47,724 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:10 366 . with status=ERROR
+2013-07-01 15:34:48,123 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 15:43:51,802 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 15:45:00,020 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 15:45:00,020 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:01:06 225 . with status=ERROR
+2013-07-01 15:45:00,232 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 15:45:14,078 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 15:45:42,320 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 15:45:42,322 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:26 351 . with status=ERROR
+2013-07-01 15:45:42,653 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 18:44:19,821 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 18:44:37,687 [IOEngine] INFO  pt.ptsi.stfe.io.engine.IOEngine - ===> STOPPED Engine & Monitor With Success!!...
+2013-07-01 18:44:37,705 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT shutting down daemon
+2013-07-01 18:44:55,877 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 18:45:38,248 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 18:46:40,003 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 18:48:42,702 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 18:49:07,955 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 18:49:07,955 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:23 184 . with status=ERROR
+2013-07-01 18:49:08,196 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 18:49:20,662 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 18:49:45,753 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 18:49:45,755 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:23 050 . with status=ERROR
+2013-07-01 18:49:45,962 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 18:50:28,164 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 18:56:28,490 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 18:56:53,923 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 18:56:53,925 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:23 293 . with status=ERROR
+2013-07-01 18:56:54,188 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 18:57:15,578 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 18:57:51,033 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 18:57:51,035 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:33 236 . with status=ERROR
+2013-07-01 18:57:51,237 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 18:58:33,723 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:00:33,461 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:00:33,461 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:01:57 640 . with status=ERROR
+2013-07-01 19:00:33,667 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:04:40,707 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:05:07,172 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:05:07,173 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:24 542 . with status=ERROR
+2013-07-01 19:05:07,390 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:05:49,980 [IOEngine] INFO  pt.ptsi.stfe.io.engine.IOEngine - ===> STOPPED Engine & Monitor With Success!!...
+2013-07-01 19:05:49,990 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT shutting down daemon
+2013-07-01 19:08:22,536 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:08:47,971 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:08:47,971 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:23 580 . with status=ERROR
+2013-07-01 19:08:48,143 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:09:08,634 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:09:47,729 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:10:12,677 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:10:12,679 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:23 079 . with status=ERROR
+2013-07-01 19:10:12,880 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:11:26,930 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:11:53,111 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:11:53,111 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:24 081 . with status=ERROR
+2013-07-01 19:11:53,288 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:12:12,693 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:12:36,522 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:12:36,522 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:21 780 . with status=ERROR
+2013-07-01 19:12:36,731 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:12:51,101 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:12:58,521 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:13:20,064 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:13:20,065 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:19 537 . with status=ERROR
+2013-07-01 19:13:20,285 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:17:33,242 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:17:58,285 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:17:58,286 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:23 075 . with status=ERROR
+2013-07-01 19:17:58,498 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:19:31,790 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:22:16,909 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:24:18,891 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:24:43,519 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:24:43,520 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:22 704 . with status=ERROR
+2013-07-01 19:24:43,716 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:26:34,725 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:27:00,451 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:27:00,451 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:23 869 . with status=ERROR
+2013-07-01 19:27:00,648 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:27:51,312 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:27:56,535 [IOEngine] INFO  pt.ptsi.stfe.io.engine.IOEngine - ===> STOPPED Engine & Monitor With Success!!...
+2013-07-01 19:27:56,535 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT shutting down daemon
+2013-07-01 19:28:18,170 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 Workflow took : 00:00:24 834 . with status=OK
+2013-07-01 19:28:18,329 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:30:33,124 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:30:39,804 [DefaultQuartzScheduler_Worker-1] WARN  pt.ptsi.stfe.io.engine.IOEngine - ended execution, took 00:00:04 811
+2013-07-01 19:30:39,805 [DefaultQuartzScheduler_Worker-1] INFO  pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 Workflow took : 00:00:04 816 . with status=NOACTION
+2013-07-01 19:33:23,505 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:33:45,266 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:33:45,267 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:19 719 . with status=ERROR
+2013-07-01 19:33:45,488 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:34:14,866 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:34:36,034 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:34:36,034 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:19 301 . with status=ERROR
+2013-07-01 19:34:36,223 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:36:27,605 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:36:52,033 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:36:52,035 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:22 600 . with status=ERROR
+2013-07-01 19:36:52,228 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:39:42,931 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:40:07,320 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:40:07,320 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:22 517 . with status=ERROR
+2013-07-01 19:40:07,501 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:47:59,873 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:48:21,990 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:48:21,990 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:20 275 . with status=ERROR
+2013-07-01 19:48:22,192 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:49:47,729 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:50:09,956 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:50:09,958 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:20 035 . with status=ERROR
+2013-07-01 19:50:10,085 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:53:24,092 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:53:46,141 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:53:46,141 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:20 332 . with status=ERROR
+2013-07-01 19:53:46,269 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 19:56:57,078 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 19:57:18,850 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Broken pipe
+2013-07-01 19:57:18,850 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.local]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:20 055 . with status=ERROR
+2013-07-01 19:57:19,013 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!
+2013-07-01 20:55:37,851 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 20:55:38,513 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 20:55:41,934 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: /feleadtr/output/eddie/GTE_BLG_000001978_20130521.dat
+2013-07-01 20:55:41,934 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:01 622 . with status=ERROR
+2013-07-01 20:56:43,703 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 20:56:44,297 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 20:57:36,031 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 20:57:36,522 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 21:01:24,253 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 21:01:24,764 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 21:02:24,451 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 21:02:24,935 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 21:03:28,998 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 21:03:29,487 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 21:03:31,256 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Failure writing to local file.
+2013-07-01 21:03:31,257 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 323 . with status=ERROR
+2013-07-01 21:06:12,988 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 21:06:13,463 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 21:06:15,190 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Failure writing to local file.
+2013-07-01 21:06:15,190 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 292 . with status=ERROR
+2013-07-01 21:08:11,360 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 21:08:11,936 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 21:10:52,983 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: Failure writing to local file.
+2013-07-01 21:10:55,380 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:02:41 977 . with status=ERROR
+2013-07-01 21:11:17,754 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 21:11:18,230 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 21:11:20,540 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+2013-07-01 21:11:20,541 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 912 . with status=ERROR
+2013-07-01 21:12:03,829 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 21:12:04,533 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 21:12:29,774 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+2013-07-01 21:12:29,774 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:23 787 . with status=ERROR
+2013-07-01 21:12:35,224 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 21:12:35,663 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 21:14:29,541 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 21:14:30,365 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 21:14:36,531 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+2013-07-01 21:14:36,532 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:04 815 . with status=ERROR
+2013-07-01 21:15:00,317 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 21:41:13,829 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-01 21:41:14,371 [main] ERROR pt.ptsi.stfe.io.engine.IOEngine - et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+java.net.UnknownHostException: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at pt.ptsi.stfe.io.engine.IOEngine.init(IOEngine.java:90)
+	at pt.ptsi.stfe.io.engine.MainConsoleScheduler.launchEngine(MainConsoleScheduler.java:49)
+	at pt.ptsi.stfe.io.engine.MainDisplayScheduler.main(MainDisplayScheduler.java:92)
+Caused by: java.net.UnknownHostException: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 3 more
+2013-07-01 21:41:16,117 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[null]:leadtracking-put-files:789787769/ftp-put: FTP to Destination: et00824492.ptportugal.corppt.com: et00824492.ptportugal.corppt.com: nodename nor servname provided, or not known
+2013-07-01 21:41:16,117 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[null]:leadtracking-put-files:789787769 DIDN'T FINISH but took 00:00:00 268 . with status=ERROR

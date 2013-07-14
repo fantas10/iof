@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Documentacao:
+		Leadtracking service
+ -->
+<service name="leadtracking" description="Leadtracking Service" domain="FEProduction">
+	<jobList type="sequential">
+		<job scope="internal" nature="transfer" type="pt.ptsi.stfe.transfer.IOFileTransferJob">
+			<protocol>SFTP</protocol>
+			<server>10.162.205.100</server> <!-- Entreposto de Ficheiros @ PRD -->
+			<account>
+				<username>feleadtr</username>
+				<password>fe2010tr</password>
+			</account>
+			<remotefiles> <!-- 1..many targets -->
+				<target 
+					sourceDirectory="/feleadtr/input/wireless" 
+					destinationDirectory="Z:/PRD_TMN_Input/LEADTRACKING/" 
+					filter="^GTE_BLG_\d{10}_\d{8}.dat$" cadency="0" />
+
+				<!-- cadency is optional: 0 is all files > 0 (bunch of files at a time) @see scheduling -->
+			</remotefiles>			
+		</job>
+	</jobList>
+
+
+	<!-- Scheduling always via Quartz -->
+	<scheduling>
+		<job type="cron"></job>
+	</scheduling>
+
+	<!-- notification 
+		.sendEmail
+		.web-service call
+		.jms event
+		.database
+	-->
+	<notification>
+	</notification>
+	
+	<!-- log4j: what to put here... ? -->
+	<log>
+	</log>
+
+</service>

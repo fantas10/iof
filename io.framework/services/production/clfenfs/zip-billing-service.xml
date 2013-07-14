@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] Backup Files
+	@date 		20120921
+	@documentation:
+		1)  Scans temp dir for files to Zip and Backup
+		2)  Zip files to each Billing Backup path
+		3)  Deletes source file (on temp)
+-->
+<service name="ZIP-Billing-Backup" description="Zip raw files to each Billing Backup path" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="WBE-IAA: Zip to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\WBE\*{Date.yyyy}_*{Date.MM}\*{File[0,17]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^EMAIL.(WBE|IAA).D(\d){6}.H(\d){6}.(CTL|RES|DATA|TOT|COMPLETE|WBE|IAA|CTR)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>
+		<job name="TMN-UBL: Zip to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\*{Date.yyyy}*{Date.MM}\UBL\UBL_*{File[0,5]}.*{Date.yyyyMMdd}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.UBL$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+		<job name="tmn-sms: Zip to Backup sms FE files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\*{Date.yyyyMM}\sms\*{File[0,5]}.*{File[10,16]}.*{Date.dd}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.SMS$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>
+		<job name="tmn-sms: Zip to Backup sms PPS files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\*{Date.yyyyMM}\sms\*{File[0,9]}.*{File[14,20]}.*{Date.dd}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PPS.(TMN02|TMN01).([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.SMS$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>		
+		<job name="tmn-sms: Zip to Backup sms PAYMENT files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\*{Date.yyyyMM}\sms\*{File[0,14]}.*{File[19,25]}.*{Date.dd}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PAYMENTS.TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.SMS$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>	
+		<job name="tmn-pps: Zip to Backup TMN PPS files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\*{Date.yyyy}*{Date.MM}\PPS\*{File[0,9]}.*{Date.yyyyMMdd}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PPS.(TMN02|TMN01).([A-Z](\d){2}|[A-Z]{2}\d).(COMPLETE|(\d){8}.(EMAIL|TODAS).(DATA|RES|TOT|CTL))$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>	
+		<job name="tmn-afp: Zip to Backup TMN AFP files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\TMN\*{Date.yyyy}*{Date.MM}\*{File[0,5]}.*{Date.yyyyMMdd}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.(DATA|RES|TOT|CTL)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>	
+		<job name="sit-afp: Zip to Backup SIT AFP files " scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\SIT\*{Date.yyyy}*{Date.MM}\*{File[0,7]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^SIT.(\d){3}.(\w|.)*(COMPLETE|TOT|RES|DATA|CTL|MSG.TXT)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>	
+		<job name="dsit: Zip to Backup DSIT/Online files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\SIT\preprocessor\*{Date.yyyy}_*{Date.MM}\dsit_*{Date.MM}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(Sit|SIT)_(\d|_)+_(\d){6}.(dsit|complete)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>	
+		<job name="clipb2c: Zip to Backup AFP files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\CLIP\*{File[0,6]}\*{Date.yyyy}*{Date.MM}\*{File[0,21]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PTCASA.CLIP.(\d){2}.(\d){6}.((\w|.)+).(DATA|RES|CTL)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>
+		<job name="clipb2b: Zip to Backup AFP files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\CLIP\*{File[0,9]}\*{Date.yyyy}*{Date.MM}\*{File[0,24]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PTEMPRESA.CLIP.(\d){2}.(\d){6}.((\w|.)+).(DATA|RES|CTL)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+		<job name="pullbills-clip-casa: Zip to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\CLIP\PullBills\*{Date.yyyy}*{Date.MM}\*{File[0,21]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PTCASA.CLIP.(\d){2}.(\d){6}.(PBREPSI|PBREP01).D(\d){6}_T(\d){6}_(EMAIL|EMAILCOPIA|EMAILPAPEL|ONLINE).(DATA|RES|CTL)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>
+		<job name="pullbills-clip-empresa: Zip to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\CLIP\PullBills\*{Date.yyyy}*{Date.MM}\*{File[0,24]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^PTEMPRESA.CLIP.(\d){2}.(\d){6}.(PBREPSI|PBREP01).D(\d){6}_T(\d){6}_(EMAIL|EMAILCOPIA|EMAILPAPEL|ONLINE).(DATA|RES|CTL)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>		
+		<job name="pullbills-clip-hx02: Zip to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.ZipJob">
+			<sources>
+				<from>F:\BACKUPS\__toZipBackup</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\CLIP\PullBills\*{Date.yyyy}*{Date.MM}\*{File[0,13]}.zip</to>
+			</destinations>
+			<filterOptions>
+				<filter>^(CLIP|clip)_(\d){8}.(PBREPSI|PBREP01).(D(\d){6}.T(\d){6}|.)*(DATA|complete|NIF)$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>									
+	</jobList>	
+	<notification on="all|none|one|last|first">
+		
+	</notification>
+	<scheduling>
+		<startAt date="immediate"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="1"/> 			
+	</scheduling>	
+</service>

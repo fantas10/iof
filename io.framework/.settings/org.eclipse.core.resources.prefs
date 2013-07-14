@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/pt/ptsi/stfe/archive/CopyJob.java=UTF-8
+encoding//src/pt/ptsi/stfe/archive/DeleteJob.java=UTF-8
+encoding//src/pt/ptsi/stfe/archive/SourceLocation.java=UTF-8
+encoding//src/pt/ptsi/stfe/archive/ZipJob.java=UTF-8
+encoding//src/pt/ptsi/stfe/io/engine/jobs/AbstractJob.java=UTF-8
+encoding//src/pt/ptsi/stfe/io/engine/xml/IOXmlDestinations.java=UTF-8
+encoding//src/pt/ptsi/stfe/io/engine/xml/IOXmlFilterOptions.java=UTF-8
+encoding//src/pt/ptsi/stfe/io/engine/xml/IOXmlSources.java=UTF-8
+encoding//src/pt/ptsi/stfe/io/engine/xml/IOXmlTransfer.java=UTF-8
+encoding//src/pt/ptsi/stfe/transfer/PutJob.java=UTF-8

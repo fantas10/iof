@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Documentação:
+
+		Domain
+ -->
+ <domain name="FEProduction" prefix="fe.prod">
+ 
+ 	<local>
+ 		<!-- <clusterAddress>clfeec.ptsi.corppt.com</clusterAddress>  -->
+ 	</local>
+ 	
+ 	<remote>
+ 		<server name="weblogic@tpknt76">
+ 			<context server="t3://10.50.57.181:7003"
+ 				 user="weblogic"
+ 				 password="stfe!support2010" 
+ 				 jndiFactory="weblogic.jndi.WLInitialContextFactory" />
+ 		</server>
+	 	<email>
+	 		<mailserver>mailapp.telecom.pt</mailserver>
+	 		<sender description="Serviço Fatura Eletrónica">factura@telecom.pt</sender>
+	 		<replyTo>stfe-ptc@telecom.pt</replyTo>
+	 		<to>stfe-ptc@telecom.pt,pedro-a-pinheiro@telecom.pt</to>
+	 		<cc></cc>
+	 	</email> 		
+ 	</remote>
+
+ </domain>

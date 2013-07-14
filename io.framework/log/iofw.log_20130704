@@ -1,0 +1,20 @@
+2013-07-04 18:40:31,385 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-04 18:40:46,712 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-04 18:41:02,760 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-04 18:42:04,266 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [default]:[eddie-macbook.local]:leadtracking-service:789787769/ftp-get: Copy from leadtracking: Operation timed out
+2013-07-04 18:42:04,266 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [default]:[eddie-macbook.local]:leadtracking-service:789787769 DIDN'T FINISH but took 00:01:15 655 . with status=ERROR
+2013-07-04 18:42:20,341 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [default]:[eddie-macbook.local]:leadtracking-service:789787769/ftp-get: Copy from leadtracking: Operation timed out
+2013-07-04 18:42:20,342 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [default]:[eddie-macbook.local]:leadtracking-service:789787769 DIDN'T FINISH but took 00:01:15 702 . with status=ERROR
+2013-07-04 20:37:39,198 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-04 20:37:44,638 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [default]:[eddie-macbook.lan]:leadtracking-service:789787769/ftp-get: Copy from leadtracking: Client not authenticated
+2013-07-04 20:37:44,638 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [default]:[eddie-macbook.lan]:leadtracking-service:789787769 DIDN'T FINISH but took 00:00:03 219 . with status=ERROR
+2013-07-04 20:51:18,549 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-04 20:51:23,736 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.lan]:leadtracking-service:789787769/ftp-get: Copy from leadtracking: Client not authenticated
+2013-07-04 20:51:23,737 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.lan]:leadtracking-service:789787769 DIDN'T FINISH but took 00:00:03 199 . with status=ERROR
+2013-07-04 20:52:28,590 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-04 20:52:33,847 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.lan]:leadtracking-service:789787769/ftp-get: Copy from leadtracking: Client not authenticated
+2013-07-04 20:52:33,847 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.lan]:leadtracking-service:789787769 DIDN'T FINISH but took 00:00:02 946 . with status=ERROR
+2013-07-04 20:53:08,379 [main] INFO  pt.ptsi.stfe.io.engine.IOEngine - io/framework:IOEngineSWT start daemon
+2013-07-04 20:53:22,623 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - [EddieMacBook]:[eddie-macbook.lan]:leadtracking-service:789787769/ftp-get: Copy from leadtracking: SSH_MSG_DISCONNECT: 2 Too many authentication failures for feleadtr 
+2013-07-04 20:53:22,623 [DefaultQuartzScheduler_Worker-1] ERROR pt.ptsi.stfe.io.engine.IOEngine - Service [EddieMacBook]:[eddie-macbook.lan]:leadtracking-service:789787769 DIDN'T FINISH but took 00:00:11 967 . with status=ERROR
+2013-07-04 20:54:48,270 [DefaultQuartzScheduler_Worker-1] FATAL pt.ptsi.stfe.io.engine.IOEngine - COULD NOT SEND FEEDBACK EMAIL!

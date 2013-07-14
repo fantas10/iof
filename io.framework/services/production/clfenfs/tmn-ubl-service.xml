@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@author		Nuno Pedro Infante A. Lourenco
+	@title 		[Finishing 2 PFE] TMN UBL files
+	@date 		20120814
+	@documentation:
+		1)  Scans NFS source files for TMN UBL files and unzips them
+		2)  Zip TMN UBL files to Backup
+		3)  Deletes the 0Kb files
+		4)  Moves to OA destination folder (DeliveryFinishing)
+		5)  Notifies all
+-->
+<service name="TMN.UBL.delivery" 
+	description="Copies and Backups UBL files to Finishing delivery for OA/Websupport" domain="FEProduction">
+	<jobList type="sequential">
+		<job name="tmn-ubl: Unzip Files" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.UnzipJob">
+			<sources>
+				<from password="cLip">F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>F:\zip\TMN</to>
+			</destinations>
+			<filterOptions>
+				<filter>^TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.UBL.zip$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource>		
+		</job>	
+		<job name="tmn-ubl: Copy TMN files to Backup" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>F:\BACKUPS\__toZipBackup</to>
+			</destinations>
+			<filterOptions>
+				<filter>^TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.UBL$</filter>
+			</filterOptions>
+			<deleteOnSource>false</deleteOnSource> 
+		</job>		
+		<job scope="internal" nature="archive" name="tmn-ubl: delete 0kb files" type="pt.ptsi.stfe.archive.DeleteJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<filterOptions>
+				<filter>^TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.UBL$</filter>
+				<size direction="atMost">0</size>
+			</filterOptions>
+		</job>
+ 		<job name="tmn-UBL: Copy to Delivery" scope="internal" nature="archive" type="pt.ptsi.stfe.archive.CopyJob">
+			<sources>
+				<from>F:\zip\TMN</from>
+			</sources>
+			<destinations>
+				<to>M:\PRD_Input\TMN_UBL</to>
+			</destinations>
+			<filterOptions>
+				<filter>^TMN02.([A-Z](\d){2}|[A-Z]{2}\d).(\d){8}.EMAIL.UBL$</filter>
+			</filterOptions>
+			<deleteOnSource>true</deleteOnSource> 
+		</job>
+	</jobList>
+	<scheduling>
+		<startAt date="2012-08-14 00:21:30"/>
+		<!-- interval in timeType: hours | minutes | seconds -->
+		<interval in="hours" value="2"/> 			
+	</scheduling>
+</service>
